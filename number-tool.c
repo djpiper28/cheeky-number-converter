@@ -10,7 +10,7 @@ int main(int argc, char **argv){
                val, val, val);
         printf("bin ");
         while(val) {
-            printf(val & (1 << (sizeof(val) * 8) - 1) ? "1" : "0");
+            printf(val & (1 << ((sizeof(val) * 8) - 1)) ? "1" : "0");
             val <<= 1;
         }
         printf("\n");

@@ -9,7 +9,7 @@ int main(int argc, char **argv){
         printf("dec %d\noct %o\nhex %x\n",
                val, val, val);
         printf("bin ");
-        while(val) {
+        for(int i = 0; i < sizeof(val) * 8; i++) {
             printf(val & (1 << ((sizeof(val) * 8) - 1)) ? "1" : "0");
             val <<= 1;
         }
